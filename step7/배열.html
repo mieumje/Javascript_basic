@@ -10,9 +10,17 @@
 
 <body>
     <script>
-        var member = ['mj', 'MJ', 'MinJe']
+        /*var member = ['mj', 'MJ', 'MinJe']
 
-        alert(member[0]); alert(member[1]); alert(member[2])
+        alert(member[0]); alert(member[1]); alert(member[2])*/
+
+        var get_members = function () {
+            return ['mj', 'MJ', 'MinJe']
+        }
+        var member = get_members()
+        document.write(member[0] + ' <br />')
+        document.write(member[1] + ' <br />')
+        document.write(member[2] + ' <br />')
     </script>
 </body>
 
