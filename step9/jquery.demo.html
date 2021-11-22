@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <!-- <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script> -->
     <script src="jquery.js"></script>
 </head>
 
@@ -12,8 +13,11 @@
         <li>empty</li>
         <li>empty</li>
     </ul>
-    <script>
-        $('#list li').text('Coding everybody');
+    <input id="execute_btn" type="button" value="execute" />
+    <script type="text/javascript">
+        $('#execute_btn').click(function () {
+            $('#list li').text('coding everybody');
+        })
     </script>
 </body>
 
