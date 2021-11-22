@@ -10,20 +10,14 @@
 
 <body>
     <script>
-        if (true || true) {
-            console.log(1)
-        }
+        var id = prompt('아이디를 입력하세요')
+        var password = prompt('패스워드를 입력하세요')
 
-        if (true || false) {
-            console.log(2)
+        if (id == 'mj' || id == 'MJ' && password == '1234') {
+            alert('인증 성공')
         }
-
-        if (false || true) {
-            console.log(3)
-        }
-
-        if (false || false) {
-            console.log(4)
+        else {
+            alert('인증 실패')
         }
     </script>
 </body>
