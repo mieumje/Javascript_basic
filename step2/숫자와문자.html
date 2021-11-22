@@ -10,10 +10,25 @@
 
 <body>
     <script>
-        alert(1);
-        console.log(1.1 + 1.2);
-        console.log(2 * 8);
-        console.log(6 / 2);
+        var num_pow = Math.pow(3, 2);       // 3^2
+        console.log(num_pow);
+
+        var num_round = Math.round(10.6);   // 반올림
+        console.log(num_round);
+
+        var num_ceil = Math.ceil(10.2);     // 올림
+        console.log(num_ceil);
+
+        var num_floor = Math.floor(10, 2);  // 내림
+        console.log(num_floor);
+
+        var num_sqrt = Math.sqrt(9);        // 제곱근
+        console.log(num_sqrt);
+
+        var num_random = Math.random(); // 매번 난수를 설정함
+        console.log(num_random);        // 난수는 0부터 1.0 사이의 랜덤한 숫자
+        console.log(100 * num_random);  // 곱하기 100을 하면 100보다 작은 난수를 생성
+        console.log(Math.round(100 * num_random));  // 100보다 작은 난수의 반올림 수만 출력
     </script>
 </body>
 
