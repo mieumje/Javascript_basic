@@ -13,6 +13,10 @@
         var x = {
             'list': { 'Mj': 10, 'MJ': 20 },
             'show': function () {
+                for (var name in this.list) {
+                    document.write("key : " + name + " , value : " + this.list[name] + "<br />")
+                    console.log(name, this.list[name])
+                }
                 console.log(this.list) // this : 이 함수가 속해 있는 객체를 가르키는 변수
             }
         }
