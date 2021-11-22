@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 객체의 생성 { key : value }
+        var grades_1 = { 'mj': 10, 'MJ': 6, 'Minje': 80 };
+        var grades_2 = new Object();
+        grades_2['mj'] = 11;
+        grades_2['MJ'] = 12;
+        grades_2['Minje'] = 26;
+
+        console.log(grades_1['Minje'])
+        console.log(grades_2['Minje'])
+        console.log(grades_1.Minje)
+        console.log(grades_2.Minje)
+
+
+        var x = Object.keys(grades_1)[0]            // grades_1의 첫 번째 key 값
+        var y = grades_1[Object.keys(grades_1)[0]]  // grades_1의 첫 번째 value 값
+
+        console.log(x, y)
+    </script>
+</body>
+
+</html>
