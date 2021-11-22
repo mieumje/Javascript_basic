@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var x = {
+            'list': { 'Mj': 10, 'MJ': 20 },
+            'show': function () {
+                console.log(this.list) // this : 이 함수가 속해 있는 객체를 가르키는 변수
+            }
+        }
+
+        x['show']();
+
+    </script>
+</body>
+
+</html>
