@@ -83,7 +83,7 @@ term.on('line', line => {
             gBallCount++;
     }
 
-    if (gStrikeCount === 3 || ++gTryCount > MAX_TRY_COUNT) {
+    if (gStrikeCount === 3) {
         endGame();
     }
 
