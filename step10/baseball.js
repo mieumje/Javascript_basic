@@ -1,6 +1,5 @@
 const readline = require('readline');
 
-const MAX_TRY_COUNT = 9;
 const ANSWER_NUMS = [0, 0, 0];
 let gStrikeCount;
 let gBallCount;
