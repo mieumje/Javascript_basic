@@ -7,15 +7,31 @@ let gBallCount;
 let gTryCount;
 
 function setAnswer() {
-    do {
-        let randNum = Math.floor(Math.random() * 100000) % 1000;
+    let randNum = Math.floor(Math.random() * 100000) % 1000;
+    let arr = []
+
+    arr[0] = Math.floor(randNum / 100);
+    arr[1] = ANSWER_NUMS[1] = Math.floor((randNum % 100) / 10);
+    arr[2] = ANSWER_NUMS[2] = randNum % 10;
+
+    if (!hasDuplicatedAndZeroNumber(arr)) {
+        // ANSWER_NUMS[0] = Math.floor(randNum / 100);
+        // ANSWER_NUMS[1] = Math.floor((randNum % 100) / 10);
+        // ANSWER_NUMS[2] = randNum % 10;
+
+        ANSWER_NUMS[0] = arr[0];
+        ANSWER_NUMS[1] = arr[1];
+        ANSWER_NUMS[2] = arr[2];
+    } else setAnswer();
+    // do {
+    //     let randNum = Math.floor(Math.random() * 100000) % 1000;
 
 
-        ANSWER_NUMS[0] = Math.floor(randNum / 100);
-        ANSWER_NUMS[1] = Math.floor((randNum % 100) / 10);
-        ANSWER_NUMS[2] = randNum % 10;
+    //     ANSWER_NUMS[0] = Math.floor(randNum / 100);
+    //     ANSWER_NUMS[1] = Math.floor((randNum % 100) / 10);
+    //     ANSWER_NUMS[2] = randNum % 10;
 
-    } while (!hasDuplicatedAndZeroNumber(setAnswer));
+    // } while (!hasDuplicatedAndZeroNumber(ANSWER_NUMS));
 }
 
 const isValidNum = inputStr => {
