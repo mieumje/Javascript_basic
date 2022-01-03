@@ -2,9 +2,9 @@ import { clock } from './htmlDom.js';
 
 export const getDate = () => {
   const date = new Date();
-  const Hours = (`0${date.getHours()}`).slice(-2);
-  const Minutes = (`0${date.getMinutes()}`).slice(-2);
-  const Seconds = (`0${date.getSeconds()}`).slice(-2);
+  const Hours = String(date.getHours()).padStart(2, '0');
+  const Minutes = String(date.getMinutes()).padStart(2, '0');
+  const Seconds = String(date.getSeconds()).padStart(2, '0');
 
   clock.innerText = `${Hours}:${Minutes}:${Seconds}`;
 };
