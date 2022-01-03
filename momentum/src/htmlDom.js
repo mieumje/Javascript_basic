@@ -4,6 +4,7 @@ import { paintGreeting, USERNAME_KEY } from './user.js';
 export const loginForm = document.querySelector('#login-form');
 export const loginInput = document.querySelector('#login-form input');
 export const greeting = document.querySelector('#greeting');
+export const clock = document.querySelector('#clock');
 
 export const onLoginSubmit = (e) => {
   e.preventDefault();
