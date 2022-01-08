@@ -1,6 +1,6 @@
-import { clock } from './htmlDom.js';
+const clock = document.querySelector('#clock');
 
-export const getDate = () => {
+function getClock() {
   const date = new Date();
   const Hours = String(date.getHours()).padStart(2, '0');
   const Minutes = String(date.getMinutes()).padStart(2, '0');
@@ -8,3 +8,6 @@ export const getDate = () => {
 
   clock.innerText = `${Hours}:${Minutes}:${Seconds}`;
 };
+
+getClock();
+setInterval(getClock, 1000);

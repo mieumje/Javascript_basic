@@ -1,4 +1,4 @@
-export const quotesMessages = [
+const quotesMessages = [
     {
         quote: "The way to get started is to quit talking and begin doing.",
         author: "Walt Disney",
@@ -41,3 +41,10 @@ export const quotesMessages = [
         author: "Sheda Savage",
     }
 ];
+
+const quote = document.querySelector("#quote span:first-child");
+const author = document.querySelector("#quote span:last-child");
+const paintingQuote = quotesMessages[Math.floor(Math.random() * quotesMessages.length)];
+
+quote.innerText = paintingQuote.quote;
+author.innerText = paintingQuote.author;
