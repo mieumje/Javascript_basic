@@ -1,35 +1,22 @@
+console.time('label')
 function solution(arr) {
     let answer = 0;
+    let dx = [0, 0, -1, 1] // left, right, top, bottom의 x좌표 이동값
+    let dy = [-1, 1, 0, 0] // left, right, top, bottom의 y좌표 이동값
     for (let x = 0; x < arr.length; x++) {
         for (let y = 0; y < arr[x].length; y++) {
-            let point = arr[x][y];
-            let top = 0, bottom = 0, left = 0, right = 0;
-            if (x === 0) {
-                top = 0;
-            } else {
-                top = arr[x - 1][y];
+            let flag = 1;
+            for (let z = 0; z < 4; z++) {
+                let nx = x + dx[z];
+                let ny = y + dy[z];
+                if (nx >= 0 && nx < arr.length && ny >= 0 && ny < arr.length && arr[nx][ny] >= arr[x][y]) {
+                    flag = 0;
+                    break;
+                }
             }
-            if (x === arr.length - 1) {
-                bottom = 0;
-            } else {
-                bottom = arr[x + 1][y];
-            }
-            if (y === 0) {
-                left = 0;
-            } else {
-                left = arr[x][y - 1];
-            }
-            if (y === arr.length - 1) {
-                right = 0;
-            } else {
-                right = arr[x][y + 1]
-            }
-            if (point === Math.max(left, right, top, bottom, point)) {
-                answer += 1;
-            }
+            if (flag) answer += 1;
         }
     }
-
     return answer;
 }
 
@@ -39,3 +26,4 @@ let arr = [[5, 3, 7, 2, 3],
 [4, 3, 6, 4, 1],
 [8, 7, 3, 5, 2]];
 console.log(solution(arr));
+console.timeEnd('label')
