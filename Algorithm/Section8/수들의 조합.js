@@ -5,6 +5,7 @@ function solution(n, k, arr, m) {
         if (L === k) {
             let sum = tmp.slice().reduce((acc, cur) => acc + cur);
             if (sum % m === 0) answer++;
+            return
         } else {
             for (let i = start; i < n; i++) {
                 tmp[L] = arr[i];
