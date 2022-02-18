@@ -1,5 +1,4 @@
 # String.prototype.split()
-===
 split() 메서드는 String 객체를 지정한 구분자를 이용하여 여러 개의 문자열로 나눕니다.
 
 ## String.prototype.split() 사용예제
@@ -18,12 +17,13 @@ const strCopy = str.split();
 console.log(strCopy);
 // expected output: Array ["The quick brown fox jumps over the lazy dog."]
 ```
+
 ### split()의 반환값
 주어진 문자열을 separator마다 끊은 부분 문자열을 담은 Array.
-===
+</br>
+</br>
 
 # Array.prototype.reverse()
-===
 reverse() 메서드는 배열의 순서를 반전합니다. 첫 번째 요소는 마지막 요소가 되며 마지막 요소는 첫 번째 요소가 됩니다.
 
 ## Array.prototype.reverse() 사용예제
@@ -43,10 +43,10 @@ console.log('array1:', array1);
 ```
 ### reverse()의 반환값
 순서가 반전된 배열.
-===
+</br>
+</br>
 
 # Array.prototype.join()
-===
 join() 메서드는 배열의 모든 요소를 연결해 하나의 문자열로 만듭니다.
 
 ## Array.prototype.join() 사용예제
@@ -64,7 +64,11 @@ console.log(elements.join('-'));
 ```
 ### join()의 반환값
 배열의 모든 요소들을 연결한 하나의 문자열을 반환합니다. 만약 arr.length 가 0이라면, 빈 문자열을 반환합니다.
-===
+
+</br>
+</br>
+
+---
 # 유효한 팰린드롬 설명
 + 입력 받은 문자열을 LowerCase로 전환
 ++ 대소문자는 비교하지 않음
